@@ -1,0 +1,92 @@
+.upcoming-events {
+    background-color: #540D6E;
+    min-height: 320px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 40px;
+    margin-top: auto;
+    
+    .title {
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: solid 2px #ffffff;
+        width: 100%;
+        max-width: 392px;
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: normal;
+            justify-content: center;
+        }
+    }
+    
+    .events {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start; /* Crucial: Ensures all .event children align to the top */
+        margin-bottom: 20px;
+        width: 100%;
+
+        .event {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start; /* Ensure .date and .event-detail within THIS .event align to the top */
+            flex: 0 0 calc(20% - 16px);
+            min-width: 180px;
+            /* Add overflow-wrap if long words are stretching the box, though word-wrap is already there */
+            /* overflow-wrap: break-word; */ /* Sometimes helpful for very long unbroken strings */
+
+            .date {
+                width: 60px;
+                height: 60px;
+                background-color: #ee4367;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                flex-shrink: 0;
+                text-align: center;
+                /* If there's any perceived vertical offset due to the date box being smaller than content,
+                   it's usually because the parent .event's align-items isn't working as expected,
+                   or there's some margin/padding issue here. */
+            }
+
+            .event-detail {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+                font-size: 14px;
+                flex: 1;
+                min-width: 0;
+                /* Add a consistent top margin of 0 to ensure it doesn't push down */
+                margin-top: 0; 
+                
+                .event-title {
+                    font-weight: bold;
+                    margin-bottom: 8px;
+                    font-size: 14px;
+                    line-height: 1.2;
+                    word-wrap: break-word;
+                }
+                
+                .event-description {
+                    font-size: 12px;
+                    line-height: 1.3;
+                    opacity: 0.9;
+                    margin: 0;
+                    word-wrap: break-word;
+                }
+                
+                .details {
+                    color: #ee4367;
+                    font-size: 12px;
+                    line-height: 1.3;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

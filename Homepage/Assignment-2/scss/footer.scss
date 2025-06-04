@@ -1,0 +1,95 @@
+footer {
+    height: 455px;
+    background-color: #ee4367;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .brand-top {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        .brand {
+            color: #ffffff;
+            font-size: 48px;
+            font-weight: bold;
+            text-transform: lowercase;
+            letter-spacing: -1px;
+            border: 2px solid #ffffff;
+            padding: 15px 30px;
+        }
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+
+        .contact-info {
+            color: #ffffff;
+            font-size: 14px;
+            line-height: 1.6;
+
+            .address {
+                margin-bottom: 8px;
+            }
+
+            .phone {
+                margin-bottom: 8px;
+            }
+
+            .email {
+                margin-bottom: 15px;
+            }
+
+            .copyright {
+                font-size: 12px;
+                opacity: 0.9;
+            }
+        }
+    }
+
+    .signup {
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    input {
+        height: 100%;
+        width: 529px;
+        background-color: #f56b88;
+        border: none;
+        color: rgba(238, 67, 103, 1);
+        font-size: 16px;
+        padding-left: 15px;
+        
+        &::placeholder {
+            color: rgba(238, 67, 103, 1);
+            opacity: 1;
+        }
+    }
+
+    .button {
+        height: 100%;
+        width: 167px;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ee4367;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        
+        &:hover {
+            background-color: #f8f8f8;
+        }
+    }
+}

@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+@font-face {
+  font-family: GilSansReg;
+  src: url(fonts/GillSans.ttc);
+}
+nav {
+  width: 980px;
+  height: 90px;
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  border-bottom: solid 2px #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+nav .logo {
+  position: fixed;
+  width: 92px;
+  height: 42px;
+  border: solid 2px #ffffff;
+}
+nav .logo span {
+  position: absolute;
+  bottom: -5px;
+  color: #ffffff;
+}
+nav .links {
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+nav .links a {
+  text-decoration: none;
+  color: #ffffff;
+}
+nav .links span {
+  color: #EE4367;
+}
+
+.hero {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 209, 64, 0.8)), to(rgba(255, 209, 64, 0.5))), url(../images/hero.jpg);
+  background-image: linear-gradient(to bottom, rgba(255, 209, 64, 0.8), rgba(255, 209, 64, 0.5)), url(../images/hero.jpg);
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.hero .centered-content {
+  width: 500px;
+  text-align: center;
+}
+
+.quote {
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.quote .content {
+  width: 789px;
+}
+.quote .content .quote-text {
+  font-style: italic;
+}
+.quote .content .author {
+  color: #ee4367;
+  margin-bottom: 0;
+}
+.quote .content .title {
+  font-size: 10px;
+}
+
+.upcoming-events {
+  background-color: #540D6E;
+  min-height: 320px;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 40px;
+  margin-top: auto;
+}
+.upcoming-events .title {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: solid 2px #ffffff;
+  width: 100%;
+  max-width: 392px;
+}
+.upcoming-events .title h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: normal;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.upcoming-events .events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; /* Crucial: Ensures all .event children align to the top */
+  margin-bottom: 20px;
+  width: 100%;
+}
+.upcoming-events .events .event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; /* Ensure .date and .event-detail within THIS .event align to the top */
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(20% - 16px);
+          flex: 0 0 calc(20% - 16px);
+  min-width: 180px;
+  /* Add overflow-wrap if long words are stretching the box, though word-wrap is already there */
+  /* overflow-wrap: break-word; */ /* Sometimes helpful for very long unbroken strings */
+}
+.upcoming-events .events .event .date {
+  width: 60px;
+  height: 60px;
+  background-color: #ee4367;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  text-align: center;
+  /* If there's any perceived vertical offset due to the date box being smaller than content,
+     it's usually because the parent .event's align-items isn't working as expected,
+     or there's some margin/padding issue here. */
+}
+.upcoming-events .events .event .event-detail {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 14px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 0;
+  /* Add a consistent top margin of 0 to ensure it doesn't push down */
+  margin-top: 0;
+}
+.upcoming-events .events .event .event-detail .event-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+.upcoming-events .events .event .event-detail .event-description {
+  font-size: 12px;
+  line-height: 1.3;
+  opacity: 0.9;
+  margin: 0;
+  word-wrap: break-word;
+}
+.upcoming-events .events .event .event-detail .details {
+  color: #ee4367;
+  font-size: 12px;
+  line-height: 1.3;
+  margin-top: 5px;
+}
+
+footer {
+  height: 455px;
+  background-color: #ee4367;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .brand-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+footer .brand-top .brand {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: lowercase;
+  letter-spacing: -1px;
+  border: 2px solid #ffffff;
+  padding: 15px 30px;
+}
+footer .footer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+footer .footer-info .contact-info {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.6;
+}
+footer .footer-info .contact-info .address {
+  margin-bottom: 8px;
+}
+footer .footer-info .contact-info .phone {
+  margin-bottom: 8px;
+}
+footer .footer-info .contact-info .email {
+  margin-bottom: 15px;
+}
+footer .footer-info .contact-info .copyright {
+  font-size: 12px;
+  opacity: 0.9;
+}
+footer .signup {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+footer input {
+  height: 100%;
+  width: 529px;
+  background-color: #f56b88;
+  border: none;
+  color: rgb(238, 67, 103);
+  font-size: 16px;
+  padding-left: 15px;
+}
+footer input::-webkit-input-placeholder {
+  color: rgb(238, 67, 103);
+  opacity: 1;
+}
+footer input::-moz-placeholder {
+  color: rgb(238, 67, 103);
+  opacity: 1;
+}
+footer input:-ms-input-placeholder {
+  color: rgb(238, 67, 103);
+  opacity: 1;
+}
+footer input::-ms-input-placeholder {
+  color: rgb(238, 67, 103);
+  opacity: 1;
+}
+footer input::placeholder {
+  color: rgb(238, 67, 103);
+  opacity: 1;
+}
+footer .button {
+  height: 100%;
+  width: 167px;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ee4367;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+footer .button:hover {
+  background-color: #f8f8f8;
+}

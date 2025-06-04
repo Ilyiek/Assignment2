@@ -1,0 +1,127 @@
+.upcoming-events {
+  background-color: #540D6E;
+  min-height: 320px;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px;
+  margin-top: auto;
+}
+.upcoming-events .title {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: solid 2px #ffffff;
+  width: 100%;
+  max-width: 392px;
+}
+.upcoming-events .title h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: normal;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.upcoming-events .events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; /* Changed from flex-start to stretch */
+  margin-bottom: 20px;
+}
+.upcoming-events .events .event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  min-width: 210px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-height: 120px; /* Added minimum height for consistency */
+}
+.upcoming-events .events .event .date {
+  width: 60px;
+  height: 60px;
+  background-color: #ee4367;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-weight: bold;
+  text-align: center;
+}
+.upcoming-events .events .event .date .day {
+  font-size: 16px;
+  line-height: 0.9;
+  margin-bottom: 2px;
+}
+.upcoming-events .events .event .date .month {
+  font-size: 10px;
+  line-height: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.upcoming-events .events .event .event-detail {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 14px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* Added flex display */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; /* Stack content vertically */
+}
+.upcoming-events .events .event .event-detail .event-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.upcoming-events .events .event .event-detail .event-description {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0.9;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; /* Allow description to grow and fill space */
+}
+.upcoming-events .events .event .event-detail .details {
+  color: #ee4367;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: auto; /* Push details to bottom if needed */
+}
